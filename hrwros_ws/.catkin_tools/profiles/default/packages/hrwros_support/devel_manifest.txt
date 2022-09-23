@@ -1,5 +1,0 @@
-hrwros_support
-/home/mark/hrwros_ws/devel/.private/hrwros_support/cmake.lock /home/mark/hrwros_ws/devel/./cmake.lock
-/home/mark/hrwros_ws/devel/.private/hrwros_support/share/hrwros_support/cmake/hrwros_supportConfig.cmake /home/mark/hrwros_ws/devel/share/hrwros_support/cmake/hrwros_supportConfig.cmake
-/home/mark/hrwros_ws/devel/.private/hrwros_support/share/hrwros_support/cmake/hrwros_supportConfig-version.cmake /home/mark/hrwros_ws/devel/share/hrwros_support/cmake/hrwros_supportConfig-version.cmake
-/home/mark/hrwros_ws/devel/.private/hrwros_support/lib/pkgconfig/hrwros_support.pc /home/mark/hrwros_ws/devel/lib/pkgconfig/hrwros_support.pc
