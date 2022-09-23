@@ -60,15 +60,15 @@ include CMakeFiles/conveyor_spawner.dir/flags.make
 CMakeFiles/conveyor_spawner.dir/src/conveyor_spawner.cpp.o: CMakeFiles/conveyor_spawner.dir/flags.make
 CMakeFiles/conveyor_spawner.dir/src/conveyor_spawner.cpp.o: /home/mark/hrwros_ws/src/hrwros_gazebo/src/conveyor_spawner.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mark/hrwros_ws/build/hrwros_gazebo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/conveyor_spawner.dir/src/conveyor_spawner.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/conveyor_spawner.dir/src/conveyor_spawner.cpp.o -c /home/mark/hrwros_ws/src/hrwros_gazebo/src/conveyor_spawner.cpp
+	/usr/lib/ccache/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/conveyor_spawner.dir/src/conveyor_spawner.cpp.o -c /home/mark/hrwros_ws/src/hrwros_gazebo/src/conveyor_spawner.cpp
 
 CMakeFiles/conveyor_spawner.dir/src/conveyor_spawner.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/conveyor_spawner.dir/src/conveyor_spawner.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mark/hrwros_ws/src/hrwros_gazebo/src/conveyor_spawner.cpp > CMakeFiles/conveyor_spawner.dir/src/conveyor_spawner.cpp.i
+	/usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mark/hrwros_ws/src/hrwros_gazebo/src/conveyor_spawner.cpp > CMakeFiles/conveyor_spawner.dir/src/conveyor_spawner.cpp.i
 
 CMakeFiles/conveyor_spawner.dir/src/conveyor_spawner.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/conveyor_spawner.dir/src/conveyor_spawner.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mark/hrwros_ws/src/hrwros_gazebo/src/conveyor_spawner.cpp -o CMakeFiles/conveyor_spawner.dir/src/conveyor_spawner.cpp.s
+	/usr/lib/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mark/hrwros_ws/src/hrwros_gazebo/src/conveyor_spawner.cpp -o CMakeFiles/conveyor_spawner.dir/src/conveyor_spawner.cpp.s
 
 # Object files for target conveyor_spawner
 conveyor_spawner_OBJECTS = \

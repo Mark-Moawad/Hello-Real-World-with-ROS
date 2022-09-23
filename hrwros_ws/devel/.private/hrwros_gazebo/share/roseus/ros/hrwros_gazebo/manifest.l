@@ -12,7 +12,6 @@
 (ros::load-ros-package "dynamic_reconfigure")
 (ros::load-ros-package "gazebo_msgs")
 (ros::load-ros-package "geometry_msgs")
-(ros::load-ros-package "kobuki_msgs")
 (ros::load-ros-package "map_msgs")
 (ros::load-ros-package "nav_msgs")
 (ros::load-ros-package "nodelet")

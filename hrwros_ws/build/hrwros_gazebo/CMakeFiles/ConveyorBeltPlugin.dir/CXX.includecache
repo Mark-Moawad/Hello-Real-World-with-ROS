@@ -255,9 +255,9 @@ gazebo/util/system.hh
 /usr/include/gazebo-11/gazebo/common/gazebo/util/system.hh
 
 /usr/include/gazebo-11/gazebo/common/WeakBind.hh
-boost/shared_ptr.hpp
--
 boost/bind.hpp
+-
+boost/shared_ptr.hpp
 -
 
 /usr/include/gazebo-11/gazebo/gazebo_config.h
@@ -5729,6 +5729,8 @@ gazebo/util/system.hh
 /usr/include/gazebo-11/gazebo/transport/Connection.hh
 tbb/task.h
 -
+tbb/version.h
+-
 google/protobuf/message.h
 -
 boost/asio.hpp
@@ -5761,6 +5763,8 @@ gazebo/common/Exception.hh
 /usr/include/gazebo-11/gazebo/transport/gazebo/common/Exception.hh
 gazebo/common/WeakBind.hh
 /usr/include/gazebo-11/gazebo/transport/gazebo/common/WeakBind.hh
+gazebo/transport/TaskGroup.hh
+/usr/include/gazebo-11/gazebo/transport/gazebo/transport/TaskGroup.hh
 gazebo/util/system.hh
 /usr/include/gazebo-11/gazebo/transport/gazebo/util/system.hh
 
@@ -5779,10 +5783,12 @@ gazebo/msgs/msgs.hh
 /usr/include/gazebo-11/gazebo/transport/gazebo/msgs/msgs.hh
 gazebo/common/SingletonT.hh
 /usr/include/gazebo-11/gazebo/transport/gazebo/common/SingletonT.hh
-gazebo/transport/Publisher.hh
-/usr/include/gazebo-11/gazebo/transport/gazebo/transport/Publisher.hh
 gazebo/transport/Connection.hh
 /usr/include/gazebo-11/gazebo/transport/gazebo/transport/Connection.hh
+gazebo/transport/Publisher.hh
+/usr/include/gazebo-11/gazebo/transport/gazebo/transport/Publisher.hh
+gazebo/transport/TaskGroup.hh
+/usr/include/gazebo-11/gazebo/transport/gazebo/transport/TaskGroup.hh
 gazebo/util/system.hh
 /usr/include/gazebo-11/gazebo/transport/gazebo/util/system.hh
 
@@ -5794,6 +5800,8 @@ gazebo/util/system.hh
 
 /usr/include/gazebo-11/gazebo/transport/Node.hh
 tbb/task.h
+-
+tbb/version.h
 -
 boost/bind.hpp
 -
@@ -5807,6 +5815,8 @@ string
 -
 vector
 -
+gazebo/transport/TaskGroup.hh
+/usr/include/gazebo-11/gazebo/transport/gazebo/transport/TaskGroup.hh
 gazebo/transport/TransportTypes.hh
 /usr/include/gazebo-11/gazebo/transport/gazebo/transport/TransportTypes.hh
 gazebo/transport/TopicManager.hh
@@ -5909,6 +5919,12 @@ CallbackHelper.hh
 /usr/include/gazebo-11/gazebo/transport/CallbackHelper.hh
 gazebo/util/system.hh
 /usr/include/gazebo-11/gazebo/transport/gazebo/util/system.hh
+
+/usr/include/gazebo-11/gazebo/transport/TaskGroup.hh
+utility
+-
+tbb/tbb.h
+-
 
 /usr/include/gazebo-11/gazebo/transport/TopicManager.hh
 boost/bind.hpp
@@ -6165,7 +6181,13 @@ ignition/math/MassMatrix3.hh
 -
 ignition/math/Material.hh
 -
+ignition/math/Plane.hh
+-
 ignition/math/Vector3.hh
+-
+ignition/math/detail/WellOrderedVector.hh
+/usr/include/ignition/math6/ignition/math/ignition/math/detail/WellOrderedVector.hh
+set
 -
 ignition/math/detail/Box.hh
 /usr/include/ignition/math6/ignition/math/ignition/math/detail/Box.hh
@@ -6445,6 +6467,12 @@ ignition/math/Vector3.hh
 -
 ignition/math/config.hh
 -
+ignition/math/Line2.hh
+-
+ignition/math/Quaternion.hh
+-
+optional
+-
 
 /usr/include/ignition/math6/ignition/math/Pose3.hh
 ignition/math/Quaternion.hh
@@ -6531,6 +6559,8 @@ ignition/math/Material.hh
 /usr/include/ignition/math6/ignition/math/ignition/math/Material.hh
 ignition/math/Quaternion.hh
 /usr/include/ignition/math6/ignition/math/ignition/math/Quaternion.hh
+ignition/math/Plane.hh
+/usr/include/ignition/math6/ignition/math/ignition/math/Plane.hh
 ignition/math/detail/Sphere.hh
 /usr/include/ignition/math6/ignition/math/ignition/math/detail/Sphere.hh
 
@@ -6603,19 +6633,25 @@ ignition/math/config.hh
 /usr/include/ignition/math6/ignition/math/Vector2.hh
 algorithm
 -
+cmath
+-
+limits
+-
 ignition/math/Helpers.hh
 -
 ignition/math/config.hh
 -
 
 /usr/include/ignition/math6/ignition/math/Vector3.hh
-iostream
--
-fstream
+algorithm
 -
 cmath
 -
-algorithm
+fstream
+-
+iostream
+-
+limits
 -
 ignition/math/Helpers.hh
 -
@@ -6637,6 +6673,10 @@ ignition/math/config.hh
 /usr/include/ignition/math6/ignition/math/Vector4.hh
 algorithm
 -
+cmath
+-
+limits
+-
 ignition/math/Matrix4.hh
 -
 ignition/math/Helpers.hh
@@ -6647,6 +6687,16 @@ ignition/math/config.hh
 /usr/include/ignition/math6/ignition/math/config.hh
 
 /usr/include/ignition/math6/ignition/math/detail/Box.hh
+ignition/math/Triangle3.hh
+/usr/include/ignition/math6/ignition/math/detail/ignition/math/Triangle3.hh
+algorithm
+-
+set
+-
+utility
+-
+vector
+-
 
 /usr/include/ignition/math6/ignition/math/detail/Capsule.hh
 limits
@@ -6675,6 +6725,10 @@ ignition/math/Inertial.hh
 /usr/include/ignition/math6/ignition/math/detail/Sphere.hh
 ignition/math/Sphere.hh
 /usr/include/ignition/math6/ignition/math/detail/ignition/math/Sphere.hh
+
+/usr/include/ignition/math6/ignition/math/detail/WellOrderedVector.hh
+ignition/math/Vector3.hh
+-
 
 /usr/include/ignition/math6/ignition/math/graph/Edge.hh
 cstdint
@@ -6757,11 +6811,15 @@ ignition/math/Helpers.hh
 /usr/include/ignition/msgs5/ignition/msgs.hh
 ignition/msgs/config.hh
 -
+ignition/msgs/detail/PointCloudPackedUtils.hh
+-
 ignition/msgs/detail/SuppressWarning.hh
 -
 ignition/msgs/Factory.hh
 -
 ignition/msgs/Filesystem.hh
+-
+ignition/msgs/PointCloudPackedUtils.hh
 -
 ignition/msgs/SuppressWarning.hh
 -
@@ -6981,6 +7039,8 @@ ignition/msgs/model_configuration.pb.h
 -
 ignition/msgs/model_v.pb.h
 -
+ignition/msgs/navsat.pb.h
+-
 ignition/msgs/occupancy_grid.pb.h
 -
 ignition/msgs/odometry.pb.h
@@ -6990,6 +7050,8 @@ ignition/msgs/packet.pb.h
 ignition/msgs/param.pb.h
 -
 ignition/msgs/param_v.pb.h
+-
+ignition/msgs/performance_sensor_metrics.pb.h
 -
 ignition/msgs/physics.pb.h
 -
@@ -7143,6 +7205,22 @@ ignition/msgs/world_stats.pb.h
 -
 ignition/msgs/wrench.pb.h
 -
+
+/usr/include/ignition/msgs5/ignition/msgs/PointCloudPackedUtils.hh
+ignition/msgs/pointcloud_packed.pb.h
+-
+cstdarg
+-
+sstream
+-
+string
+-
+vector
+-
+ignition/msgs/config.hh
+/usr/include/ignition/msgs5/ignition/msgs/ignition/msgs/config.hh
+ignition/msgs/detail/PointCloudPackedUtils.hh
+/usr/include/ignition/msgs5/ignition/msgs/ignition/msgs/detail/PointCloudPackedUtils.hh
 
 /usr/include/ignition/msgs5/ignition/msgs/SuppressWarning.hh
 ignition/msgs/detail/SuppressWarning.hh
@@ -8239,6 +8317,16 @@ ignition/msgs/Export.hh
 -
 
 /usr/include/ignition/msgs5/ignition/msgs/detail/Export.hh
+
+/usr/include/ignition/msgs5/ignition/msgs/detail/PointCloudPackedUtils.hh
+ignition/msgs/pointcloud_packed.pb.h
+-
+iostream
+-
+string
+-
+ignition/msgs/config.hh
+/usr/include/ignition/msgs5/ignition/msgs/detail/ignition/msgs/config.hh
 
 /usr/include/ignition/msgs5/ignition/msgs/detail/SuppressWarning.hh
 
@@ -10654,6 +10742,42 @@ memory
 ignition/msgs/Export.hh
 -
 
+/usr/include/ignition/msgs5/ignition/msgs/navsat.pb.h
+string
+-
+google/protobuf/stubs/common.h
+-
+google/protobuf/io/coded_stream.h
+-
+google/protobuf/arena.h
+-
+google/protobuf/arenastring.h
+-
+google/protobuf/generated_message_table_driven.h
+-
+google/protobuf/generated_message_util.h
+-
+google/protobuf/inlined_string_field.h
+-
+google/protobuf/metadata.h
+-
+google/protobuf/message.h
+-
+google/protobuf/repeated_field.h
+-
+google/protobuf/extension_set.h
+-
+google/protobuf/unknown_field_set.h
+-
+ignition/msgs/header.pb.h
+/usr/include/ignition/msgs5/ignition/msgs/ignition/msgs/header.pb.h
+sys/sysmacros.h
+-
+memory
+-
+ignition/msgs/Export.hh
+-
+
 /usr/include/ignition/msgs5/ignition/msgs/occupancy_grid.pb.h
 string
 -
@@ -10863,6 +10987,42 @@ ignition/msgs/param.pb.h
 /usr/include/ignition/msgs5/ignition/msgs/ignition/msgs/param.pb.h
 ignition/msgs/header.pb.h
 /usr/include/ignition/msgs5/ignition/msgs/ignition/msgs/header.pb.h
+sys/sysmacros.h
+-
+memory
+-
+ignition/msgs/Export.hh
+-
+
+/usr/include/ignition/msgs5/ignition/msgs/performance_sensor_metrics.pb.h
+string
+-
+google/protobuf/stubs/common.h
+-
+google/protobuf/io/coded_stream.h
+-
+google/protobuf/arena.h
+-
+google/protobuf/arenastring.h
+-
+google/protobuf/generated_message_table_driven.h
+-
+google/protobuf/generated_message_util.h
+-
+google/protobuf/inlined_string_field.h
+-
+google/protobuf/metadata.h
+-
+google/protobuf/message.h
+-
+google/protobuf/repeated_field.h
+-
+google/protobuf/extension_set.h
+-
+google/protobuf/unknown_field_set.h
+-
+ignition/msgs/double.pb.h
+/usr/include/ignition/msgs5/ignition/msgs/ignition/msgs/double.pb.h
 sys/sysmacros.h
 -
 memory
@@ -14082,7 +14242,7 @@ memory
 string
 -
 
-/usr/include/sdformat-9.5/sdf/Actor.hh
+/usr/include/sdformat-9.7/sdf/Actor.hh
 memory
 -
 string
@@ -14090,19 +14250,19 @@ string
 ignition/math/Pose3.hh
 -
 sdf/Element.hh
-/usr/include/sdformat-9.5/sdf/sdf/Element.hh
+/usr/include/sdformat-9.7/sdf/sdf/Element.hh
 sdf/Types.hh
-/usr/include/sdformat-9.5/sdf/sdf/Types.hh
+/usr/include/sdformat-9.7/sdf/sdf/Types.hh
 sdf/Link.hh
-/usr/include/sdformat-9.5/sdf/sdf/Link.hh
+/usr/include/sdformat-9.7/sdf/sdf/Link.hh
 sdf/Joint.hh
-/usr/include/sdformat-9.5/sdf/sdf/Joint.hh
+/usr/include/sdformat-9.7/sdf/sdf/Joint.hh
 sdf/sdf_config.h
-/usr/include/sdformat-9.5/sdf/sdf/sdf_config.h
+/usr/include/sdformat-9.7/sdf/sdf/sdf_config.h
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-9.5/sdf/AirPressure.hh
+/usr/include/sdformat-9.7/sdf/AirPressure.hh
 sdf/Error.hh
 -
 sdf/Element.hh
@@ -14112,7 +14272,7 @@ sdf/Noise.hh
 sdf/sdf_config.h
 -
 
-/usr/include/sdformat-9.5/sdf/Altimeter.hh
+/usr/include/sdformat-9.7/sdf/Altimeter.hh
 sdf/Error.hh
 -
 sdf/Element.hh
@@ -14122,23 +14282,23 @@ sdf/Noise.hh
 sdf/sdf_config.h
 -
 
-/usr/include/sdformat-9.5/sdf/Assert.hh
+/usr/include/sdformat-9.7/sdf/Assert.hh
 sdf/Exception.hh
-/usr/include/sdformat-9.5/sdf/sdf/Exception.hh
+/usr/include/sdformat-9.7/sdf/sdf/Exception.hh
 
-/usr/include/sdformat-9.5/sdf/Atmosphere.hh
+/usr/include/sdformat-9.7/sdf/Atmosphere.hh
 ignition/math/Temperature.hh
 -
 sdf/Element.hh
-/usr/include/sdformat-9.5/sdf/sdf/Element.hh
+/usr/include/sdformat-9.7/sdf/sdf/Element.hh
 sdf/Types.hh
-/usr/include/sdformat-9.5/sdf/sdf/Types.hh
+/usr/include/sdformat-9.7/sdf/sdf/Types.hh
 sdf/sdf_config.h
-/usr/include/sdformat-9.5/sdf/sdf/sdf_config.h
+/usr/include/sdformat-9.7/sdf/sdf/sdf_config.h
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-9.5/sdf/Box.hh
+/usr/include/sdformat-9.7/sdf/Box.hh
 ignition/math/Box.hh
 -
 ignition/math/Vector3.hh
@@ -14150,7 +14310,7 @@ sdf/Element.hh
 sdf/sdf_config.h
 -
 
-/usr/include/sdformat-9.5/sdf/Camera.hh
+/usr/include/sdformat-9.7/sdf/Camera.hh
 string
 -
 ignition/math/Pose3.hh
@@ -14164,7 +14324,7 @@ sdf/Noise.hh
 sdf/sdf_config.h
 -
 
-/usr/include/sdformat-9.5/sdf/Collision.hh
+/usr/include/sdformat-9.7/sdf/Collision.hh
 memory
 -
 string
@@ -14172,17 +14332,17 @@ string
 ignition/math/Pose3.hh
 -
 sdf/Element.hh
-/usr/include/sdformat-9.5/sdf/sdf/Element.hh
+/usr/include/sdformat-9.7/sdf/sdf/Element.hh
 sdf/SemanticPose.hh
-/usr/include/sdformat-9.5/sdf/sdf/SemanticPose.hh
+/usr/include/sdformat-9.7/sdf/sdf/SemanticPose.hh
 sdf/Types.hh
-/usr/include/sdformat-9.5/sdf/sdf/Types.hh
+/usr/include/sdformat-9.7/sdf/sdf/Types.hh
 sdf/sdf_config.h
-/usr/include/sdformat-9.5/sdf/sdf/sdf_config.h
+/usr/include/sdformat-9.7/sdf/sdf/sdf_config.h
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-9.5/sdf/Console.hh
+/usr/include/sdformat-9.7/sdf/Console.hh
 fstream
 -
 iostream
@@ -14194,9 +14354,9 @@ string
 sdf/sdf_config.h
 -
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-9.5/sdf/Cylinder.hh
+/usr/include/sdformat-9.7/sdf/Cylinder.hh
 ignition/math/Cylinder.hh
 -
 sdf/Error.hh
@@ -14206,7 +14366,7 @@ sdf/Element.hh
 sdf/sdf_config.h
 -
 
-/usr/include/sdformat-9.5/sdf/Element.hh
+/usr/include/sdformat-9.7/sdf/Element.hh
 any
 -
 map
@@ -14222,15 +14382,15 @@ utility
 vector
 -
 sdf/Param.hh
-/usr/include/sdformat-9.5/sdf/sdf/Param.hh
+/usr/include/sdformat-9.7/sdf/sdf/Param.hh
 sdf/sdf_config.h
-/usr/include/sdformat-9.5/sdf/sdf/sdf_config.h
+/usr/include/sdformat-9.7/sdf/sdf/sdf_config.h
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 sdf/Types.hh
-/usr/include/sdformat-9.5/sdf/sdf/Types.hh
+/usr/include/sdformat-9.7/sdf/sdf/Types.hh
 
-/usr/include/sdformat-9.5/sdf/Error.hh
+/usr/include/sdformat-9.7/sdf/Error.hh
 iostream
 -
 string
@@ -14238,9 +14398,9 @@ string
 sdf/sdf_config.h
 -
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-9.5/sdf/Exception.hh
+/usr/include/sdformat-9.7/sdf/Exception.hh
 cstdint
 -
 iostream
@@ -14254,9 +14414,9 @@ string
 sdf/sdf_config.h
 -
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-9.5/sdf/Filesystem.hh
+/usr/include/sdformat-9.7/sdf/Filesystem.hh
 memory
 -
 string
@@ -14264,57 +14424,9 @@ string
 sdf/sdf_config.h
 -
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-9.5/sdf/Frame.hh
-memory
--
-string
--
-ignition/math/Pose3.hh
--
-sdf/Element.hh
-/usr/include/sdformat-9.5/sdf/sdf/Element.hh
-sdf/SemanticPose.hh
-/usr/include/sdformat-9.5/sdf/sdf/SemanticPose.hh
-sdf/Types.hh
-/usr/include/sdformat-9.5/sdf/sdf/Types.hh
-sdf/sdf_config.h
-/usr/include/sdformat-9.5/sdf/sdf/sdf_config.h
-sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
-
-/usr/include/sdformat-9.5/sdf/Geometry.hh
-sdf/Error.hh
--
-sdf/Element.hh
--
-sdf/sdf_config.h
--
-
-/usr/include/sdformat-9.5/sdf/Gui.hh
-sdf/Element.hh
-/usr/include/sdformat-9.5/sdf/sdf/Element.hh
-sdf/Types.hh
-/usr/include/sdformat-9.5/sdf/sdf/Types.hh
-sdf/sdf_config.h
-/usr/include/sdformat-9.5/sdf/sdf/sdf_config.h
-sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
-
-/usr/include/sdformat-9.5/sdf/Heightmap.hh
-string
--
-ignition/math/Vector3.hh
--
-sdf/Element.hh
--
-sdf/Error.hh
--
-sdf/sdf_config.h
--
-
-/usr/include/sdformat-9.5/sdf/Imu.hh
+/usr/include/sdformat-9.7/sdf/ForceTorque.hh
 string
 -
 sdf/Error.hh
@@ -14326,7 +14438,7 @@ sdf/Noise.hh
 sdf/sdf_config.h
 -
 
-/usr/include/sdformat-9.5/sdf/Joint.hh
+/usr/include/sdformat-9.7/sdf/Frame.hh
 memory
 -
 string
@@ -14334,17 +14446,77 @@ string
 ignition/math/Pose3.hh
 -
 sdf/Element.hh
-/usr/include/sdformat-9.5/sdf/sdf/Element.hh
+/usr/include/sdformat-9.7/sdf/sdf/Element.hh
 sdf/SemanticPose.hh
-/usr/include/sdformat-9.5/sdf/sdf/SemanticPose.hh
+/usr/include/sdformat-9.7/sdf/sdf/SemanticPose.hh
 sdf/Types.hh
-/usr/include/sdformat-9.5/sdf/sdf/Types.hh
+/usr/include/sdformat-9.7/sdf/sdf/Types.hh
 sdf/sdf_config.h
-/usr/include/sdformat-9.5/sdf/sdf/sdf_config.h
+/usr/include/sdformat-9.7/sdf/sdf/sdf_config.h
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-9.5/sdf/JointAxis.hh
+/usr/include/sdformat-9.7/sdf/Geometry.hh
+sdf/Error.hh
+-
+sdf/Element.hh
+-
+sdf/sdf_config.h
+-
+
+/usr/include/sdformat-9.7/sdf/Gui.hh
+sdf/Element.hh
+/usr/include/sdformat-9.7/sdf/sdf/Element.hh
+sdf/Types.hh
+/usr/include/sdformat-9.7/sdf/sdf/Types.hh
+sdf/sdf_config.h
+/usr/include/sdformat-9.7/sdf/sdf/sdf_config.h
+sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
+
+/usr/include/sdformat-9.7/sdf/Heightmap.hh
+string
+-
+ignition/math/Vector3.hh
+-
+sdf/Element.hh
+-
+sdf/Error.hh
+-
+sdf/sdf_config.h
+-
+
+/usr/include/sdformat-9.7/sdf/Imu.hh
+string
+-
+sdf/Error.hh
+-
+sdf/Element.hh
+-
+sdf/Noise.hh
+-
+sdf/sdf_config.h
+-
+
+/usr/include/sdformat-9.7/sdf/Joint.hh
+memory
+-
+string
+-
+ignition/math/Pose3.hh
+-
+sdf/Element.hh
+/usr/include/sdformat-9.7/sdf/sdf/Element.hh
+sdf/SemanticPose.hh
+/usr/include/sdformat-9.7/sdf/sdf/SemanticPose.hh
+sdf/Types.hh
+/usr/include/sdformat-9.7/sdf/sdf/Types.hh
+sdf/sdf_config.h
+/usr/include/sdformat-9.7/sdf/sdf/sdf_config.h
+sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
+
+/usr/include/sdformat-9.7/sdf/JointAxis.hh
 memory
 -
 string
@@ -14352,15 +14524,15 @@ string
 ignition/math/Vector3.hh
 -
 sdf/Element.hh
-/usr/include/sdformat-9.5/sdf/sdf/Element.hh
+/usr/include/sdformat-9.7/sdf/sdf/Element.hh
 sdf/Types.hh
-/usr/include/sdformat-9.5/sdf/sdf/Types.hh
+/usr/include/sdformat-9.7/sdf/sdf/Types.hh
 sdf/sdf_config.h
-/usr/include/sdformat-9.5/sdf/sdf/sdf_config.h
+/usr/include/sdformat-9.7/sdf/sdf/sdf_config.h
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-9.5/sdf/Lidar.hh
+/usr/include/sdformat-9.7/sdf/Lidar.hh
 sdf/Error.hh
 -
 sdf/Element.hh
@@ -14372,7 +14544,7 @@ sdf/sdf_config.h
 ignition/math/Angle.hh
 -
 
-/usr/include/sdformat-9.5/sdf/Light.hh
+/usr/include/sdformat-9.7/sdf/Light.hh
 memory
 -
 string
@@ -14382,17 +14554,17 @@ ignition/math/Pose3.hh
 ignition/math/Angle.hh
 -
 sdf/Element.hh
-/usr/include/sdformat-9.5/sdf/sdf/Element.hh
+/usr/include/sdformat-9.7/sdf/sdf/Element.hh
 sdf/SemanticPose.hh
-/usr/include/sdformat-9.5/sdf/sdf/SemanticPose.hh
+/usr/include/sdformat-9.7/sdf/sdf/SemanticPose.hh
 sdf/Types.hh
-/usr/include/sdformat-9.5/sdf/sdf/Types.hh
+/usr/include/sdformat-9.7/sdf/sdf/Types.hh
 sdf/sdf_config.h
-/usr/include/sdformat-9.5/sdf/sdf/sdf_config.h
+/usr/include/sdformat-9.7/sdf/sdf/sdf_config.h
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-9.5/sdf/Link.hh
+/usr/include/sdformat-9.7/sdf/Link.hh
 memory
 -
 string
@@ -14400,17 +14572,17 @@ string
 ignition/math/Pose3.hh
 -
 sdf/Element.hh
-/usr/include/sdformat-9.5/sdf/sdf/Element.hh
+/usr/include/sdformat-9.7/sdf/sdf/Element.hh
 sdf/SemanticPose.hh
-/usr/include/sdformat-9.5/sdf/sdf/SemanticPose.hh
+/usr/include/sdformat-9.7/sdf/sdf/SemanticPose.hh
 sdf/Types.hh
-/usr/include/sdformat-9.5/sdf/sdf/Types.hh
+/usr/include/sdformat-9.7/sdf/sdf/Types.hh
 sdf/sdf_config.h
-/usr/include/sdformat-9.5/sdf/sdf/sdf_config.h
+/usr/include/sdformat-9.7/sdf/sdf/sdf_config.h
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-9.5/sdf/Magnetometer.hh
+/usr/include/sdformat-9.7/sdf/Magnetometer.hh
 sdf/Error.hh
 -
 sdf/Element.hh
@@ -14420,19 +14592,19 @@ sdf/Noise.hh
 sdf/sdf_config.h
 -
 
-/usr/include/sdformat-9.5/sdf/Material.hh
+/usr/include/sdformat-9.7/sdf/Material.hh
 string
 -
 sdf/Element.hh
-/usr/include/sdformat-9.5/sdf/sdf/Element.hh
+/usr/include/sdformat-9.7/sdf/sdf/Element.hh
 sdf/Types.hh
-/usr/include/sdformat-9.5/sdf/sdf/Types.hh
+/usr/include/sdformat-9.7/sdf/sdf/Types.hh
 sdf/sdf_config.h
-/usr/include/sdformat-9.5/sdf/sdf/sdf_config.h
+/usr/include/sdformat-9.7/sdf/sdf/sdf_config.h
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-9.5/sdf/Mesh.hh
+/usr/include/sdformat-9.7/sdf/Mesh.hh
 string
 -
 ignition/math/Vector3.hh
@@ -14444,7 +14616,7 @@ sdf/Error.hh
 sdf/sdf_config.h
 -
 
-/usr/include/sdformat-9.5/sdf/Model.hh
+/usr/include/sdformat-9.7/sdf/Model.hh
 memory
 -
 string
@@ -14454,17 +14626,29 @@ utility
 ignition/math/Pose3.hh
 -
 sdf/Element.hh
-/usr/include/sdformat-9.5/sdf/sdf/Element.hh
+/usr/include/sdformat-9.7/sdf/sdf/Element.hh
 sdf/SemanticPose.hh
-/usr/include/sdformat-9.5/sdf/sdf/SemanticPose.hh
+/usr/include/sdformat-9.7/sdf/sdf/SemanticPose.hh
 sdf/Types.hh
-/usr/include/sdformat-9.5/sdf/sdf/Types.hh
+/usr/include/sdformat-9.7/sdf/sdf/Types.hh
 sdf/sdf_config.h
-/usr/include/sdformat-9.5/sdf/sdf/sdf_config.h
+/usr/include/sdformat-9.7/sdf/sdf/sdf_config.h
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-9.5/sdf/Noise.hh
+/usr/include/sdformat-9.7/sdf/NavSat.hh
+sdf/Error.hh
+-
+sdf/Element.hh
+-
+sdf/Noise.hh
+-
+sdf/sdf_config.h
+-
+ignition/math/Angle.hh
+-
+
+/usr/include/sdformat-9.7/sdf/Noise.hh
 sdf/Error.hh
 -
 sdf/Element.hh
@@ -14472,7 +14656,7 @@ sdf/Element.hh
 sdf/sdf_config.h
 -
 
-/usr/include/sdformat-9.5/sdf/Param.hh
+/usr/include/sdformat-9.7/sdf/Param.hh
 any
 -
 algorithm
@@ -14498,39 +14682,39 @@ vector
 ignition/math.hh
 -
 sdf/Console.hh
-/usr/include/sdformat-9.5/sdf/sdf/Console.hh
+/usr/include/sdformat-9.7/sdf/sdf/Console.hh
 sdf/sdf_config.h
-/usr/include/sdformat-9.5/sdf/sdf/sdf_config.h
+/usr/include/sdformat-9.7/sdf/sdf/sdf_config.h
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 sdf/Types.hh
-/usr/include/sdformat-9.5/sdf/sdf/Types.hh
+/usr/include/sdformat-9.7/sdf/sdf/Types.hh
 
-/usr/include/sdformat-9.5/sdf/Pbr.hh
+/usr/include/sdformat-9.7/sdf/Pbr.hh
 string
 -
 sdf/Element.hh
-/usr/include/sdformat-9.5/sdf/sdf/Element.hh
+/usr/include/sdformat-9.7/sdf/sdf/Element.hh
 sdf/Types.hh
-/usr/include/sdformat-9.5/sdf/sdf/Types.hh
+/usr/include/sdformat-9.7/sdf/sdf/Types.hh
 sdf/sdf_config.h
-/usr/include/sdformat-9.5/sdf/sdf/sdf_config.h
+/usr/include/sdformat-9.7/sdf/sdf/sdf_config.h
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-9.5/sdf/Physics.hh
+/usr/include/sdformat-9.7/sdf/Physics.hh
 string
 -
 sdf/Element.hh
-/usr/include/sdformat-9.5/sdf/sdf/Element.hh
+/usr/include/sdformat-9.7/sdf/sdf/Element.hh
 sdf/Types.hh
-/usr/include/sdformat-9.5/sdf/sdf/Types.hh
+/usr/include/sdformat-9.7/sdf/sdf/Types.hh
 sdf/sdf_config.h
-/usr/include/sdformat-9.5/sdf/sdf/sdf_config.h
+/usr/include/sdformat-9.7/sdf/sdf/sdf_config.h
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-9.5/sdf/Plane.hh
+/usr/include/sdformat-9.7/sdf/Plane.hh
 ignition/math/Plane.hh
 -
 ignition/math/Vector3.hh
@@ -14544,19 +14728,19 @@ sdf/Element.hh
 sdf/sdf_config.h
 -
 
-/usr/include/sdformat-9.5/sdf/Root.hh
+/usr/include/sdformat-9.7/sdf/Root.hh
 string
 -
 sdf/SDFImpl.hh
-/usr/include/sdformat-9.5/sdf/sdf/SDFImpl.hh
+/usr/include/sdformat-9.7/sdf/sdf/SDFImpl.hh
 sdf/Types.hh
-/usr/include/sdformat-9.5/sdf/sdf/Types.hh
+/usr/include/sdformat-9.7/sdf/sdf/Types.hh
 sdf/sdf_config.h
-/usr/include/sdformat-9.5/sdf/sdf/sdf_config.h
+/usr/include/sdformat-9.7/sdf/sdf/sdf_config.h
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-9.5/sdf/SDFImpl.hh
+/usr/include/sdformat-9.7/sdf/SDFImpl.hh
 functional
 -
 memory
@@ -14564,31 +14748,31 @@ memory
 string
 -
 sdf/Param.hh
-/usr/include/sdformat-9.5/sdf/sdf/Param.hh
+/usr/include/sdformat-9.7/sdf/sdf/Param.hh
 sdf/Element.hh
-/usr/include/sdformat-9.5/sdf/sdf/Element.hh
+/usr/include/sdformat-9.7/sdf/sdf/Element.hh
 sdf/sdf_config.h
-/usr/include/sdformat-9.5/sdf/sdf/sdf_config.h
+/usr/include/sdformat-9.7/sdf/sdf/sdf_config.h
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 sdf/Types.hh
-/usr/include/sdformat-9.5/sdf/sdf/Types.hh
+/usr/include/sdformat-9.7/sdf/sdf/Types.hh
 
-/usr/include/sdformat-9.5/sdf/Scene.hh
+/usr/include/sdformat-9.7/sdf/Scene.hh
 ignition/math/Color.hh
 -
 sdf/Element.hh
-/usr/include/sdformat-9.5/sdf/sdf/Element.hh
+/usr/include/sdformat-9.7/sdf/sdf/Element.hh
 sdf/Sky.hh
-/usr/include/sdformat-9.5/sdf/sdf/Sky.hh
+/usr/include/sdformat-9.7/sdf/sdf/Sky.hh
 sdf/Types.hh
-/usr/include/sdformat-9.5/sdf/sdf/Types.hh
+/usr/include/sdformat-9.7/sdf/sdf/Types.hh
 sdf/sdf_config.h
-/usr/include/sdformat-9.5/sdf/sdf/sdf_config.h
+/usr/include/sdformat-9.7/sdf/sdf/sdf_config.h
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-9.5/sdf/SemanticPose.hh
+/usr/include/sdformat-9.7/sdf/SemanticPose.hh
 memory
 -
 string
@@ -14602,9 +14786,9 @@ sdf/Element.hh
 sdf/sdf_config.h
 -
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-9.5/sdf/Sensor.hh
+/usr/include/sdformat-9.7/sdf/Sensor.hh
 memory
 -
 string
@@ -14612,27 +14796,27 @@ string
 ignition/math/Pose3.hh
 -
 sdf/Element.hh
-/usr/include/sdformat-9.5/sdf/sdf/Element.hh
+/usr/include/sdformat-9.7/sdf/sdf/Element.hh
 sdf/SemanticPose.hh
-/usr/include/sdformat-9.5/sdf/sdf/SemanticPose.hh
+/usr/include/sdformat-9.7/sdf/sdf/SemanticPose.hh
 sdf/Types.hh
-/usr/include/sdformat-9.5/sdf/sdf/Types.hh
+/usr/include/sdformat-9.7/sdf/sdf/Types.hh
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-9.5/sdf/Sky.hh
+/usr/include/sdformat-9.7/sdf/Sky.hh
 ignition/math/Color.hh
 -
 sdf/Element.hh
-/usr/include/sdformat-9.5/sdf/sdf/Element.hh
+/usr/include/sdformat-9.7/sdf/sdf/Element.hh
 sdf/Types.hh
-/usr/include/sdformat-9.5/sdf/sdf/Types.hh
+/usr/include/sdformat-9.7/sdf/sdf/Types.hh
 sdf/sdf_config.h
-/usr/include/sdformat-9.5/sdf/sdf/sdf_config.h
+/usr/include/sdformat-9.7/sdf/sdf/sdf_config.h
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-9.5/sdf/Sphere.hh
+/usr/include/sdformat-9.7/sdf/Sphere.hh
 ignition/math/Sphere.hh
 -
 sdf/Error.hh
@@ -14642,17 +14826,17 @@ sdf/Element.hh
 sdf/sdf_config.h
 -
 
-/usr/include/sdformat-9.5/sdf/Surface.hh
+/usr/include/sdformat-9.7/sdf/Surface.hh
 sdf/Element.hh
-/usr/include/sdformat-9.5/sdf/sdf/Element.hh
+/usr/include/sdformat-9.7/sdf/sdf/Element.hh
 sdf/Types.hh
-/usr/include/sdformat-9.5/sdf/sdf/Types.hh
+/usr/include/sdformat-9.7/sdf/sdf/Types.hh
 sdf/sdf_config.h
-/usr/include/sdformat-9.5/sdf/sdf/sdf_config.h
+/usr/include/sdformat-9.7/sdf/sdf/sdf_config.h
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-9.5/sdf/Types.hh
+/usr/include/sdformat-9.7/sdf/Types.hh
 algorithm
 -
 cmath
@@ -14668,11 +14852,11 @@ vector
 sdf/sdf_config.h
 -
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 sdf/Error.hh
-/usr/include/sdformat-9.5/sdf/sdf/Error.hh
+/usr/include/sdformat-9.7/sdf/sdf/Error.hh
 
-/usr/include/sdformat-9.5/sdf/Visual.hh
+/usr/include/sdformat-9.7/sdf/Visual.hh
 memory
 -
 string
@@ -14680,57 +14864,57 @@ string
 ignition/math/Pose3.hh
 -
 sdf/Box.hh
-/usr/include/sdformat-9.5/sdf/sdf/Box.hh
+/usr/include/sdformat-9.7/sdf/sdf/Box.hh
 sdf/Cylinder.hh
-/usr/include/sdformat-9.5/sdf/sdf/Cylinder.hh
+/usr/include/sdformat-9.7/sdf/sdf/Cylinder.hh
 sdf/Element.hh
-/usr/include/sdformat-9.5/sdf/sdf/Element.hh
+/usr/include/sdformat-9.7/sdf/sdf/Element.hh
 sdf/Material.hh
-/usr/include/sdformat-9.5/sdf/sdf/Material.hh
+/usr/include/sdformat-9.7/sdf/sdf/Material.hh
 sdf/Plane.hh
-/usr/include/sdformat-9.5/sdf/sdf/Plane.hh
+/usr/include/sdformat-9.7/sdf/sdf/Plane.hh
 sdf/SemanticPose.hh
-/usr/include/sdformat-9.5/sdf/sdf/SemanticPose.hh
+/usr/include/sdformat-9.7/sdf/sdf/SemanticPose.hh
 sdf/Sphere.hh
-/usr/include/sdformat-9.5/sdf/sdf/Sphere.hh
+/usr/include/sdformat-9.7/sdf/sdf/Sphere.hh
 sdf/Types.hh
-/usr/include/sdformat-9.5/sdf/sdf/Types.hh
+/usr/include/sdformat-9.7/sdf/sdf/Types.hh
 sdf/sdf_config.h
-/usr/include/sdformat-9.5/sdf/sdf/sdf_config.h
+/usr/include/sdformat-9.7/sdf/sdf/sdf_config.h
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-9.5/sdf/World.hh
+/usr/include/sdformat-9.7/sdf/World.hh
 string
 -
 ignition/math/Vector3.hh
 -
 sdf/Atmosphere.hh
-/usr/include/sdformat-9.5/sdf/sdf/Atmosphere.hh
+/usr/include/sdformat-9.7/sdf/sdf/Atmosphere.hh
 sdf/Element.hh
-/usr/include/sdformat-9.5/sdf/sdf/Element.hh
+/usr/include/sdformat-9.7/sdf/sdf/Element.hh
 sdf/Gui.hh
-/usr/include/sdformat-9.5/sdf/sdf/Gui.hh
+/usr/include/sdformat-9.7/sdf/sdf/Gui.hh
 sdf/Scene.hh
-/usr/include/sdformat-9.5/sdf/sdf/Scene.hh
+/usr/include/sdformat-9.7/sdf/sdf/Scene.hh
 sdf/Types.hh
-/usr/include/sdformat-9.5/sdf/sdf/Types.hh
+/usr/include/sdformat-9.7/sdf/sdf/Types.hh
 sdf/sdf_config.h
-/usr/include/sdformat-9.5/sdf/sdf/sdf_config.h
+/usr/include/sdformat-9.7/sdf/sdf/sdf_config.h
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-9.5/sdf/parser.hh
+/usr/include/sdformat-9.7/sdf/parser.hh
 string
 -
 sdf/SDFImpl.hh
-/usr/include/sdformat-9.5/sdf/sdf/SDFImpl.hh
+/usr/include/sdformat-9.7/sdf/sdf/SDFImpl.hh
 sdf/sdf_config.h
-/usr/include/sdformat-9.5/sdf/sdf/sdf_config.h
+/usr/include/sdformat-9.7/sdf/sdf/sdf_config.h
 sdf/system_util.hh
-/usr/include/sdformat-9.5/sdf/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-9.5/sdf/sdf.hh
+/usr/include/sdformat-9.7/sdf/sdf.hh
 sdf/Actor.hh
 -
 sdf/AirPressure.hh
@@ -14759,6 +14943,8 @@ sdf/Exception.hh
 -
 sdf/Filesystem.hh
 -
+sdf/ForceTorque.hh
+-
 sdf/Frame.hh
 -
 sdf/Geometry.hh
@@ -14786,6 +14972,8 @@ sdf/Material.hh
 sdf/Mesh.hh
 -
 sdf/Model.hh
+-
+sdf/NavSat.hh
 -
 sdf/Noise.hh
 -
@@ -14826,7 +15014,7 @@ sdf/World.hh
 sdf/sdf_config.h
 -
 
-/usr/include/sdformat-9.5/sdf/sdf_config.h
+/usr/include/sdformat-9.7/sdf/sdf_config.h
 
-/usr/include/sdformat-9.5/sdf/system_util.hh
+/usr/include/sdformat-9.7/sdf/system_util.hh
 
