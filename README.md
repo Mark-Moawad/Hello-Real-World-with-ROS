@@ -1,4 +1,5 @@
 # Hello (Real) World with ROS – Robot Operating System
+[![Alternate Text](https://github.com/Mark-Moawad/Hello-Real-World-with-ROS/preview.png)](https://drive.google.com/file/d/1CaGhjmFSNeky4_XKoFSbqpe0pyfgFG6T/view?usp=sharing "Final_Project_Preview")
 
 These are the assignment solutions for the course: Hello (Real) World with ROS – Robot Operating System offered by TUDelft(edX). Course [website](https://www.edx.org/course/hello-real-world-with-ros-robot-operating-system)
 
